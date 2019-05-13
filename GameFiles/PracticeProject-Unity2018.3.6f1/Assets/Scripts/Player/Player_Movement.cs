@@ -6,7 +6,7 @@ public class Player_Movement : MonoBehaviour
 {
     public float PlayerMovementSpeed = 12f, JumpTakeOfSpeed = 5f;
 
-    [HideInInspector] public bool isGrounded = false, isFacingRight;
+    private bool isGrounded = false;
 
     private Rigidbody2D rb2d;
 
@@ -16,18 +16,31 @@ public class Player_Movement : MonoBehaviour
 
     void Start()
     {
+        //gets the Rigidbody2D component attached to the GameObject.
         rb2d = GetComponent<Rigidbody2D>();
+
+
         _transform = transform;
     }
 
     //Gets called around 50 Times per Sec.
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        isGrounded = Physics2D.Linecast(_transform.position, groundTag.transform.position);
+        //Sends a Raycast into a Direction if any collider is hit it will return true.
+        RaycastHit2D groundHit = Physics2D.Raycast(groundTag.transform.position, Vector2.down,0.03f);
+        
 
+        //this is a if statement to set the isGrounded to true or false based on the result of the Raycast above.
+        isGrounded = groundHit ? true:false;
+        
+
+        //Calls the Move methode and input's the required float.
         Move(Input.GetAxis("Horizontal"));
-        if (Input.GetButtonDown("Jump") && isGrounded)
+
+        //Checks if the "Jump" button is pressed and if the player is on the ground. when this is true the Jump methode is called.
+        if (Input.GetButton("Jump") && isGrounded)
         {
+            //The Jump methode is called.
             Jump();
         }
     }
@@ -35,14 +48,13 @@ public class Player_Movement : MonoBehaviour
     //Adds a force to the Player on the Y axis the elevate the Player.
     void Jump()
     {
+
         rb2d.velocity += JumpTakeOfSpeed * Vector2.up;
     }
 
     //Moves the Player in a direction. If the direction is fliped the player will also flip.
     void Move(float _Input)
-    {
-        
-        
+    {     
         Vector2 moveX = rb2d.velocity;
         moveX.x = _Input * PlayerMovementSpeed;
         rb2d.velocity = moveX;
