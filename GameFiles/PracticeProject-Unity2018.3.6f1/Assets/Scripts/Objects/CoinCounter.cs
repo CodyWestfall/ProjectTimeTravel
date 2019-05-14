@@ -9,6 +9,11 @@ public class CoinCounter : MonoBehaviour
 
     public TextMeshProUGUI CoinText;
 
+    private void Start()
+    {
+        CoinText.SetText("Coins: 0");
+    }
+
     public void AddCoins(int amount)
     {
         currentCoins = currentCoins+  amount;

@@ -6,7 +6,7 @@ public class Player_Movement : MonoBehaviour
 {
     public float PlayerMovementSpeed = 12f, JumpTakeOfSpeed = 5f;
 
-    private bool isGrounded = false;
+    public bool isGrounded = false, SecJumpAllowed = false, Jumping = false;
 
     private Rigidbody2D rb2d;
 
@@ -19,8 +19,29 @@ public class Player_Movement : MonoBehaviour
         //gets the Rigidbody2D component attached to the GameObject.
         rb2d = GetComponent<Rigidbody2D>();
 
-
+        SecJumpAllowed = true;
         _transform = transform;
+    }
+
+    void Update()
+    {
+        //Checks if the "Jump" button is pressed and if the player is on the ground. when this is true the Jump methode is called.
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (isGrounded)
+            {
+                //The Jump methode is called.
+                Jump();
+            }
+            else if (SecJumpAllowed)
+            {
+                //The Jump methode is called.
+                Jump();
+                SecJumpAllowed = false;
+            }
+
+
+        }
     }
 
     //Gets called around 50 Times per Sec.
@@ -33,23 +54,32 @@ public class Player_Movement : MonoBehaviour
         //this is a if statement to set the isGrounded to true or false based on the result of the Raycast above.
         isGrounded = groundHit ? true:false;
         
+        //When the Player isgrounded and was jumping the SecJump will be true again.
+        if(isGrounded && Jumping)
+        {
+            Jumping = false;
+            SecJumpAllowed = true;
+        }
 
         //Calls the Move methode and input's the required float.
         Move(Input.GetAxis("Horizontal"));
 
-        //Checks if the "Jump" button is pressed and if the player is on the ground. when this is true the Jump methode is called.
-        if (Input.GetButton("Jump") && isGrounded)
-        {
-            //The Jump methode is called.
-            Jump();
-        }
+        
     }
 
     //Adds a force to the Player on the Y axis the elevate the Player.
     void Jump()
     {
-
-        rb2d.velocity += JumpTakeOfSpeed * Vector2.up;
+        if (isGrounded)
+        {
+            Jumping = true;
+            rb2d.velocity += JumpTakeOfSpeed * Vector2.up;
+        }else if (SecJumpAllowed)
+        {
+            Jumping = true;
+            rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
+            rb2d.velocity += JumpTakeOfSpeed * Vector2.up;
+        }
     }
 
     //Moves the Player in a direction. If the direction is fliped the player will also flip.
