@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
-    public float PlayerMovementSpeed = 12f, JumpTakeOfSpeed = 5f;
+    public float PlayerMovementSpeed = 12f, JumpTakeOfSpeed = 5f, PlayerMoveSpeedWhileAirborn = 5f;
 
     public bool isGrounded = false, SecJumpAllowed = false, Jumping = false;
 
@@ -25,6 +25,7 @@ public class Player_Movement : MonoBehaviour
 
     void Update()
     {
+
         //Checks if the "Jump" button is pressed and if the player is on the ground. when this is true the Jump methode is called.
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -40,7 +41,13 @@ public class Player_Movement : MonoBehaviour
                 SecJumpAllowed = false;
             }
 
+        }
 
+        //When the Player isgrounded and was jumping the SecJump will be true again.
+        if (isGrounded)
+        {
+            Jumping = false;
+            SecJumpAllowed = true;
         }
     }
 
@@ -48,18 +55,11 @@ public class Player_Movement : MonoBehaviour
     void FixedUpdate()
     {
         //Sends a Raycast into a Direction if any collider is hit it will return true.
-        RaycastHit2D groundHit = Physics2D.Raycast(groundTag.transform.position, Vector2.down,0.03f);
-        
+        RaycastHit2D groundHit = Physics2D.Raycast(groundTag.transform.position, Vector2.down, 0.03f);
 
         //this is a if statement to set the isGrounded to true or false based on the result of the Raycast above.
-        isGrounded = groundHit ? true:false;
-        
-        //When the Player isgrounded and was jumping the SecJump will be true again.
-        if(isGrounded && Jumping)
-        {
-            Jumping = false;
-            SecJumpAllowed = true;
-        }
+        isGrounded = groundHit ? true : false;
+
 
         //Calls the Move methode and input's the required float.
         Move(Input.GetAxis("Horizontal"));
