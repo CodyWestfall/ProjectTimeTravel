@@ -10,11 +10,25 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 		<style>
+			/* used to fit images to their container */
 			img {
 				padding: 0;
 				margin: o auto;
 				max-width: 100%;
 				max-height: 100%;
+			}
+
+			/* styles used to quickly change the color scheme of the site */
+			body{
+				background-color: #131B23 !important
+			}
+			.navbar, .card-header, .card, .btn{
+				background-color: #0B5351 !important;
+				border-color: #0B5351 !important;
+			}
+			.card-body{
+				background-color: #42352A !important;
+				border-color: #42352A !important;
 			}
 		</style>
 	</head>
@@ -22,24 +36,24 @@
 
 	<body style="background-color:dimgrey;">
 
-			<!-- Navbar -->
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-					<div class="container">
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container">
 
-						<a class="navbar-brand" href="index.html">Project Time Travel</a>
+				<a class="navbar-brand" href="index.html">Project Time Travel</a>
 
-						<div class="collapse navbar-collapse" id="navbarText">
-					    <ul class="navbar-nav mr-auto">
-					      <li class="nav-item">
-					        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-					      </li>
-					      <li class="nav-item active">
-					        <a class="nav-link" href="Team.html">Team</a>
-					      </li>
-					    </ul>
-					  </div>
-					</div>
-			</nav>
+				<div class="collapse navbar-collapse" id="navbarText">
+				    <ul class="navbar-nav mr-auto">
+				    	<li class="nav-item">
+				        	<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+				      	</li>
+				      	<li class="nav-item active">
+				        	<a class="nav-link" href="Team.html">Team</a>
+				      	</li>
+				    </ul>
+				</div>
+			</div>
+		</nav>
 
 
 
@@ -47,14 +61,9 @@
 
 		<br />
 
-		<div class="row">
-			<div class="col-md-6 text-center center-block">
-				<img src="Images/Narrow3D.png"/>
+			<div class="text-center text-white center-block">
+				<h2>Team</h2>
 			</div>
-			<div class="col-md-6 text-center center-block">
-				<img src="Images/Narrow2D.png"/>
-			</div>
-		</div>
 
 		<br />
 
@@ -120,9 +129,7 @@
 				    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
 				      <div class="card-body">
 								<ul>
-									<li>Item 1</li>
-									<li>Item 2</li>
-									<li>Item 3</li>
+									<li>Community Manager</li>
 								</ul>
 				      </div>
 				    </div>
@@ -143,9 +150,9 @@
 				    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
 				      <div class="card-body">
 								<ul>
-									<li>Item 1</li>
-									<li>Item 2</li>
-									<li>Item 3</li>
+									<li>Lead Web Developer</li>
+									<li>Actually a plant</li>
+									<li><img style="width: 30px; height: 30px;" src="Images/fire.png"/></li>
 								</ul>
 				      </div>
 				    </div>
@@ -170,9 +177,7 @@
 				    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
 				      <div class="card-body">
 								<ul>
-									<li>Item 1</li>
-									<li>Item 2</li>
-									<li>Item 3</li>
+									<li>2D Lead Developer</li>
 								</ul>
 				      </div>
 				    </div>
@@ -312,9 +317,9 @@
 				    <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
 				      <div class="card-body">
 								<ul>
-									<li>Item 1</li>
-									<li>Item 2</li>
-									<li>Item 3</li>
+									<li>Singer</li>
+									<li>Hobby Photographer</li>
+									<li>"live your life one day at a time"</li>
 								</ul>
 				      </div>
 				    </div>
@@ -442,15 +447,106 @@
 
 			</div>
 
+			<br />
+
+			<div class="row">
+
+				<div class="col-md-3">
+					<div class="card text-white bg-dark">
+				    <div class="card-header" id="headingSeventeen">
+				      <h5 class="mb-0">
+				        <button style="width:100%; height:100%;" class="btn btn-dark" data-toggle="collapse" data-target="#collapseSeventeen" aria-expanded="true" aria-controls="collapseSeventeen">
+				          1Pun
+				        </button>
+				      </h5>
+				    </div>
+				    <div id="collapseSeventeen" class="collapse" aria-labelledby="headingSeventeen" data-parent="#accordion">
+				      <div class="card-body">
+								<ul>
+									<li>Assistant Developer</li>
+									<li>web developer</li>
+									<li>UCF knights 2021</li>
+								</ul>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<br /><br /><br />
+
+				<div class="col-md-3">
+					<div class="card text-white bg-dark">
+				    <div class="card-header" id="headingEighteen">
+				      <h5 class="mb-0">
+				        <button style="width:100%; height:100%;" class="btn btn-dark" data-toggle="collapse" data-target="#collapseEighteen" aria-expanded="true" aria-controls="collapseEighteen">
+				          Horky
+				        </button>
+				      </h5>
+				    </div>
+				    <div id="collapseEighteen" class="collapse" aria-labelledby="headingEighteen" data-parent="#accordion">
+				      <div class="card-body">
+								<ul>
+									<li>Programmer</li>
+									<li>Community Manager</li>
+								</ul>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<br /><br /><br />
+
+				<div class="col-md-3">
+					<div class="card text-white bg-dark">
+				    <div class="card-header" id="headingNineteen">
+				      <h5 class="mb-0">
+				        <button style="width:100%; height:100%;" class="btn btn-dark" data-toggle="collapse" data-target="#collapseNineteen" aria-expanded="true" aria-controls="collapseNineteen">
+				          UserName
+				        </button>
+				      </h5>
+				    </div>
+				    <div id="collapseNineteen" class="collapse" aria-labelledby="headingNineteen" data-parent="#accordion">
+				      <div class="card-body">
+								<ul>
+									<li>Item 1</li>
+									<li>Item 2</li>
+									<li>Item 3</li>
+								</ul>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<br /><br /><br />
+
+				<div class="col-md-3">
+					<div class="card text-white bg-dark">
+				    <div class="card-header" id="headingTwenty">
+				      <h5 class="mb-0">
+				        <button style="width:100%; height:100%;" class="btn btn-dark" data-toggle="collapse" data-target="#collapseTwenty" aria-expanded="true" aria-controls="collapseTwenty">
+				          UserName
+				        </button>
+				      </h5>
+				    </div>
+				    <div id="collapseTwenty" class="collapse" aria-labelledby="headingTwenty" data-parent="#accordion">
+				      <div class="card-body">
+								<ul>
+									<li>Item 1</li>
+									<li>Item 2</li>
+									<li>Item 3</li>
+								</ul>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+			</div>
+
 		</div>
   </div>
 
 
 <!--
-	1Pun<3: @Fern if you could list me as 1Pun i’d appreciate that. Idek what my role is but you could list assistant developer, or web developer. Add UCF knights 2021 as a bullet and ill send a link to my site in a bit to add as well. Thanks!
-
-	So Rinna is the name I like to go by and for information "singer, hobby photographer, "live your life one day at a time""
-
 
 
 -->
