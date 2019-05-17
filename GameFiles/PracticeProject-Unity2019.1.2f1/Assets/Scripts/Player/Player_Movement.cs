@@ -12,7 +12,9 @@ public class Player_Movement : MonoBehaviour
 
     private Transform _transform;
 
-    public GameObject groundTag;
+    public GameObject groundTag1,groundTag2;
+
+    public LayerMask ground_Layer;
 
     void Start()
     {
@@ -54,11 +56,8 @@ public class Player_Movement : MonoBehaviour
     //Gets called around 50 Times per Sec.
     void FixedUpdate()
     {
-        //Sends a Raycast into a Direction if any collider is hit it will return true.
-        RaycastHit2D groundHit = Physics2D.Raycast(groundTag.transform.position, Vector2.down, 0.03f);
-
-        //this is a if statement to set the isGrounded to true or false based on the result of the Raycast above.
-        isGrounded = groundHit ? true : false;
+        //Draws a line between two given points. When they collide with the ground_layer the isGrounded bool is set to true.
+        isGrounded = Physics2D.OverlapArea(groundTag1.transform.position, groundTag2.transform.position, ground_Layer);
 
 
         //Calls the Move methode and input's the required float.
@@ -92,4 +91,6 @@ public class Player_Movement : MonoBehaviour
         if (moveX.x < 0f) transform.eulerAngles = new Vector3(0, -180, 0);
         else if (moveX.x > 0f) transform.eulerAngles = new Vector3(0, 0, 0);
     }
+
+   
 }
