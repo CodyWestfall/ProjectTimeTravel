@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -43,7 +44,12 @@ public class Player_Movement : MonoBehaviour
                 SecJumpAllowed = false;
             }
 
+            
+
         }
+        
+        //simple way to reset the Player when he jumps of the platfrom
+        if (transform.position.y < -10) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         //When the Player isgrounded and was jumping the SecJump will be true again.
         if (isGrounded)
