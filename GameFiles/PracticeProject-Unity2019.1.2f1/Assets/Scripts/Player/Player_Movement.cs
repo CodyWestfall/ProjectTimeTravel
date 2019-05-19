@@ -17,6 +17,8 @@ public class Player_Movement : MonoBehaviour
 
     public LayerMask ground_Layer;
 
+    public CoinCounter coinCounter;
+
     void Start()
     {
         //gets the Rigidbody2D component attached to the GameObject.
@@ -98,5 +100,4 @@ public class Player_Movement : MonoBehaviour
         else if (moveX.x > 0f) transform.eulerAngles = new Vector3(0, 0, 0);
     }
 
-   
 }
