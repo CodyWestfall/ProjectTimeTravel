@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 494}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 79
+  controlID: 41
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 494}
   m_MaxSize: {x: 10004, y: 14044}
   vertical: 1
-  controlID: 80
+  controlID: 42
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,8 +243,8 @@ MonoBehaviour:
     y: 0
     width: 622
     height: 1307
-  m_MinSize: {x: 277, y: 72}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -392,9 +392,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c23f0000
-      m_LastClickedID: 16322
-      m_ExpandedIDs: 8efbffffec3f0000
+      m_SelectedIDs: 24520000
+      m_LastClickedID: 21028
+      m_ExpandedIDs: 52fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -544,9 +544,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.6160934, y: 7.34982, z: -507.8143}
+    m_Target: {x: 8.539871, y: 21.828085, z: -513.8098}
     speed: 2
-    m_Value: {x: 1.6160934, y: 7.34982, z: -507.8143}
+    m_Value: {x: 8.539871, y: 21.828085, z: -513.8098}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -579,9 +579,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.5572556
+    m_Target: 62.58049
     speed: 2
-    m_Value: 1.5572556
+    m_Value: 62.58049
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -644,20 +644,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Environment
+    - Assets/Scripts/Enemy
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scripts/Environment
+  - Assets/Scripts/Enemy
   m_LastFoldersGridSize: 96
   m_LastProjectPath: "C:\\Users\\Jo\xEBl\\Desktop\\Git\\Games\\ProjectTimeTravel\\GameFiles\\PracticeProject-Unity2019.1.2f1"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8e3a0000
-    m_LastClickedID: 14990
-    m_ExpandedIDs: 00000000e82a0000982e00008c330000ea340000aa37000056380000403a00006c3a0000943b0000ae3b0000343c00000a3d00009e3e000000ca9a3b
+    m_SelectedIDs: ba490000
+    m_LastClickedID: 18874
+    m_ExpandedIDs: 000000006c3d00001c410000104600006e4700002e4a0000da4a0000c44c0000f04c0000184e0000324e0000b84e00008e4f00002251000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -685,7 +685,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e82a0000982e00008c330000ea340000aa37000056380000403a00006c3a0000943b0000ae3b0000343c00000a3d00009e3e0000
+    m_ExpandedIDs: 000000006c3d00001c410000104600006e4700002e4a0000da4a0000c44c0000f04c0000184e0000324e0000b84e00008e4f000022510000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -712,7 +712,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000943b0000b6270000ba270000be280000743100000830000058320000ee5200009e310000e02a0000925200009a52000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
