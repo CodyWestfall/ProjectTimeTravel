@@ -576,3 +576,18 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2019.05.25-12.26.36:340][ 36]LogSlate: FSceneViewport::OnFocusLost() reason 0
 [2019.05.25-12.27.22:977][871]LogSlate: Took 0.000118 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
 [2019.05.25-12.27.23:009][871]LogSavePackage: Moving 'C:/Users/Joël/Desktop/Git/Games/ProjectTimeTravel/GameFiles/UnrealEngine/Game2DPlatformer/Saved/Jey014816E64ECC617A8277C68A39D22E52.tmp' to 'C:/Users/Joël/Desktop/Git/Games/ProjectTimeTravel/GameFiles/UnrealEngine/Game2DPlatformer/Content/2DSideScrollerBP/Resources/Jey.uasset'
+[2019.05.25-12.30.46:536][765]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2019.05.25-12.30.47:668][765]LogSlate: Window 'Delete Assets' being destroyed
+[2019.05.25-12.30.47:811][765]LogUObjectHash: Compacting FUObjectHashTables data took   0.83ms
+[2019.05.25-12.30.47:832][765]LogUObjectHash: Compacting FUObjectHashTables data took   1.22ms
+[2019.05.25-12.30.47:851][765]LogUObjectHash: Compacting FUObjectHashTables data took   0.50ms
+[2019.05.25-12.30.48:076][765]SourceControl: Error: Updated 0 paths from the index
+[2019.05.25-12.30.48:216][765]SourceControl: rm 'GameFiles/UnrealEngine/Game2DPlatformer/Content/2DSideScrollerBP/Resources/Jey.uasset'
+[2019.05.25-12.36.29:222][108]LogEditorViewport: Clicking on Actor (LMB): PaperSpriteActor (Background_Sprite)
+[2019.05.25-12.36.31:864][404]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.05.25-12.36.37:096][ 29]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.05.25-12.36.48:203][352]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.05.25-12.36.51:664][755]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.05.25-12.36.52:660][874]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.05.25-12.36.53:022][917]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.05.25-12.36.54:043][ 39]LogEditorViewport: Clicking Background
