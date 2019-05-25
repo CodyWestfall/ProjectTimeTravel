@@ -134,13 +134,16 @@ public class TileMapGeneration: MonoBehaviour
         bool last = false;
         List<Vector3> coinPosList = new List<Vector3>();
 
+        //Work our way from the right to the left
         for (int x = 0; x < map.GetUpperBound(0); x++)
         {
-
+            //work our way from the bottom up to the top
             for(int y= 0; y < map.GetUpperBound(1); y++)
             {
+                //check if the position has 0 = no tile
                 if(map[x,y] == 0)
                 {
+                    //when the last position (1 = tile) is we are going to add the position to a list
                     if(last == true)
                     {
                         Vector3 coinPos = new Vector3(x+0.5f, y + 0.5f, 0);                       
@@ -155,7 +158,8 @@ public class TileMapGeneration: MonoBehaviour
             }
         }
 
-        for(int coin = 0; coin < maxCoinAmount; coin++)
+        //we check every possible coin position and add random coins until the max amount is reached
+        for (int coin = 0; coin < maxCoinAmount; coin++)
         {
             int pos = Random.Range(1, coinPosList.Count);
             var cloneCoin = Instantiate(coinObject, coinPosList[pos],Quaternion.identity);
