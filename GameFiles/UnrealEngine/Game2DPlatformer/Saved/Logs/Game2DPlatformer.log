@@ -573,3 +573,6 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2019.05.25-12.23.20:333][151]LogSlate: FSceneViewport::OnFocusLost() reason 2
 [2019.05.25-12.23.21:075][240]LogSlate: FSceneViewport::OnFocusLost() reason 2
 [2019.05.25-12.23.46:136][961]LogSlate: Window 'Source Control Login' being destroyed
+[2019.05.25-12.26.36:340][ 36]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.05.25-12.27.22:977][871]LogSlate: Took 0.000118 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.05.25-12.27.23:009][871]LogSavePackage: Moving 'C:/Users/Joël/Desktop/Git/Games/ProjectTimeTravel/GameFiles/UnrealEngine/Game2DPlatformer/Saved/Jey014816E64ECC617A8277C68A39D22E52.tmp' to 'C:/Users/Joël/Desktop/Git/Games/ProjectTimeTravel/GameFiles/UnrealEngine/Game2DPlatformer/Content/2DSideScrollerBP/Resources/Jey.uasset'
